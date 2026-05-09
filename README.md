@@ -5,8 +5,8 @@ of dengue, chikungunya, and hand, foot, and mouth disease (HFMD) in
 Thailand, 2016 to 2025.
 
 This repository holds the analysis-ready dataset and the reproduction
-script. The accompanying data descriptor, tables, and figures are
-published separately.
+script. The dataset itself will be archived on Zenodo; the accompanying
+data descriptor, tables, and figures are published separately.
 
 The repository name is TRENDS-THAI. The dataset will be archived on
 Zenodo and assigned DOI: <Zenodo DOI placeholder>.
@@ -19,13 +19,14 @@ trends-thai/
     LICENSE                       CC BY 4.0 (data) + MIT (code)
     requirements.txt              Python package dependencies
     analysis_pipeline.py          full pipeline in one file
-    TRENDS-THAI dataset.xlsx      consolidated dataset (3 sheets)
+    data/                         optional local download location for the Zenodo dataset
 ```
 
 ## Dataset
 
-`TRENDS-THAI dataset.xlsx` contains three sheets. Both data sheets share
-`P-code` and `Province` as join keys.
+The analysis-ready dataset will be distributed via Zenodo as
+`TRENDS-THAI dataset.xlsx`. Both data sheets share `P-code` and
+`Province` as join keys.
 
 | Sheet | Rows | Cols | Description |
 |---|---|---|---|
@@ -59,8 +60,11 @@ v01) is recorded in the `province data` sheet's intro line.
 git clone https://github.com/<your-org>/TRENDS-THAI.git
 cd TRENDS-THAI
 pip install -r requirements.txt
-python analysis_pipeline.py --xlsx "TRENDS-THAI dataset.xlsx" --outdir output
+python analysis_pipeline.py --xlsx "data/TRENDS-THAI dataset.xlsx" --outdir output
 ```
+
+After downloading the dataset from Zenodo, place it in `data/` or pass
+the downloaded file path directly to `--xlsx`.
 
 The pipeline writes four CSV summaries into `output/`:
 
