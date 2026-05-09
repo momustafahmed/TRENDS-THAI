@@ -86,12 +86,3 @@ descriptor is published. Zenodo DOI: <Zenodo DOI placeholder>.
 - **Code:** MIT License.
 
 See `LICENSE` for the full text.
-
-## Ethics
-
-The dataset uses de-identified secondary surveillance data with no
-individual-level information. Ethical review was classified as exempt
-by the Research Ethics Committee of the Bamrasnaradura Infectious
-Diseases Institute, Department of Disease Control, Ministry of Public
-Health, Nonthaburi, Thailand (reference IRB/BIDI S002h/69_Exempt,
-27 February 2026).
